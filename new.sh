@@ -8,4 +8,7 @@ git checkout
 
 git stash
 
+klsdfkdiro nadfladk
 
+
+adafdaaaaaaaaaaaaf
