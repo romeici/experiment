@@ -8,7 +8,5 @@ git checkout
 
 git stash
 
-klsdfkdiro nadfladk
-
-
 adafdaaaaaaaaaaaaf
+klsdfkdiro nadfladkf
