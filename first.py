@@ -176,7 +176,35 @@ if __name__ == '__main__':
     me=Crawler()
     me.main()
 
+import Image
+im = Image.open('test.jpg')
+print im.format, im.size, im.mode
+im.thumbnail((200, 100))
+im.save('thumb.png', 'png')
 
-import os, sys
-os.system('curl ' + url)
-os.system('curl -D baidu ' + url)	
+#import os, sys
+#os.system('curl ' + url)
+#os.system('curl -D baidu ' + url)	
+
+class Student(object):
+
+    def __init__(self, name, score):
+        self.name = name
+        self.score = score
+
+    def print_score(self):
+        print '%s: %s' % (self.name, self.score)
+xu = Student('mushui', 99)
+qu = Student('jiehuan',100)
+xu.print_score()
+
+import time
+
+#from collections import Counter
+#c = Counter()
+import collections
+c = collections.Counter()
+for ch in 'programming afafdeqrtgagadfqefyqeu1564fa3d2f18e3q2ad5261248532145433erifghhsdfabvmshstqcadfaqerqsvvbcnvbmghdbsvsnnhsmmj':
+	c[ch] = c[ch] + 1
+	
+print c
