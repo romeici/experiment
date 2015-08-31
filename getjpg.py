@@ -15,6 +15,7 @@ def getImg(html):
     reg = r'src="(.+?\.jpg)" pic_ext'
     imgre = re.compile(reg)
     imglist = re.findall(imgre,html)
+    print(imglist)
     x = 0
     for imgurl in imglist:
         urlretrieve(imgurl,'%s.jpg' % x)
