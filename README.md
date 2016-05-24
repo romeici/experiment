@@ -14,7 +14,7 @@ RPM packages or DVDs by default. Need to install this library on VxWorks-7.
 ### Installation
 
 Before using this SDK in VxWorks-7, first you must fetch SDK source codes from maintainer web site 'https://github.com/ibm-messaging/iotf-embeddedc.git'. And must apply a patch with some tiny changes in order to make Bluemix SDK compatible for VxWorks-7. Some unnecessary files are removed from SDK directory. All these steps are executed by running a script setup.sh in bluemix/src directory. <br>
-    ```JavaScript
+    ```
         cd src <br>
         ./setup.sh <br>
     ```
@@ -24,14 +24,14 @@ Before using this SDK in VxWorks-7, first you must fetch SDK source codes from m
 VSB and VIP could be created in workbench UI environment as well as command line with vxprj tool. Here just list how to create them using vxprj tool, and take itl_quark BSP as an example. <br>
 
 * VSB create <br>
- ```JavaScript
+ ```
         vxprj vsb create -force -bsp itl_quark vsb_PENTIUM_32_up -S
         cd vsb_PENTIUM_32_up
         vxprj vsb add IBM_BLUEMIX
         make -j
 ```
 * VIP create <br>
- ```JavaScript
+ ```
         vxprj create -force -vsb vsb_PENTIUM_32_up itl_quark gnu vip_quark_kernel -profile PROFILE_STANDALONE_DEVELOPMENT
         cd vip_quark_kernel
         vxprj component add DRV_VXBEND_QRK_GMAC
@@ -47,7 +47,7 @@ VSB and VIP could be created in workbench UI environment as well as command line
         `vxprj parameter set BLUEMIX_QUICKSTART_MODE TRUE`
 
     If you want to create connection to registered service, please set parameters as follow: <br>
-```JavaScript
+```
         vxprj parameter set BLUEMIX_QUICKSTART_MODE FALSE <br>
         vxprj parameter set BLUEMIX_DEVICE_ID       "\"galileo_bb2b\"" <br>
         vxprj parameter set BLUEMIX_DEVICE_TYPE     "\"vx7_Galileo\"" <br>
@@ -57,22 +57,25 @@ VSB and VIP could be created in workbench UI environment as well as command line
     Note: The value of above four parameters should be consistent with the information of device registered in Watson IoT platform <br>
 
     To set up secure connection over SSL, First you need to include OPENSSL layer in VSB, as follow,  <br>
-        vxprj vsb add OPENSSL <br>
+        `vxprj vsb add OPENSSL <br>`
     Then you can set BLUEMIX_SECURE_CONNECTION to TRUE or FALSE in VIP, to decide if creating secure connection, by default it is TRUE after adding OPENSSL layer. <br>
+    ```
         vxprj parameter set BLUEMIX_SECURE_CONNECTION   TURE <br>
         vxprj parameter set BLUEMIX_CAFILE_PATH         "/romfs/SSLCACert.pem" <br>
         mkdir romfs <br>
         cp bluemix/certs/SSLCACert.pem                  ${VIP_DIR}/romfs <br>
     or <br>
         vxprj parameter set BLUEMIX_SECURE_CONNECTION   FALSE <br>
-
+    ```
     The Bluemix sample could also be run in user space. A Bluemix rtp file bluemix.vxe is generated in  ${VSB_DIR}/usr/root/gnu/bin when building VSB. To auto-spawn the DEMO in RTP space, you need to add INCLUDE_ROMFS component, then set parameter BLUEMIX_RTP_APP as TRUE, and set BLUEMIX_RTP_PATH as "/romfs/bluemix.vxe". You need to enter instructions as follow: <br>
+    ```
         vxprj component add INCLUDE_ROMFS <br>
         vxprj parameter set BLUEMIX_RTP_APP TRUE <br>
         vxprj parameter set BLUEMIX_RTP_PATH "/romfs/bluemix.vxe" <br>
         mkdir romfs <br>
         cp ${VSB_DIR}/usr/root/gnu/bin/bluemix.vxe romfs <br>
         vxprj build <br>
+    ```    
     Now you can bring up the board, and it will auto-run Bluemix SDK in user space. <br>
 
 ### Run image and view the visualization
