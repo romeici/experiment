@@ -14,7 +14,7 @@ Before using this SDK with VxWorks 7, first download the SDK source code from th
 
 	https://github.com/ibm-messaging/iotf-embeddedc.git
 
-You will then need to apply a patch with some small changes that make the IBM Bluemix SDK compatible for VxWorks 7. Some unnecessary files will need to be removed from the SDK directory. These steps are executed by running the script setup.sh found in the directory bluemix/src. 
+You will then need to apply a patch with some small changes that make the IBM Bluemix SDK compatible for VxWorks 7. Some unnecessary files will need to be removed from the SDK directory. These steps are executed by running the script setup.sh found in the directory bluemix/src.   
 Place the bluemix layer in:
 
 	$WIND_BASE/pkgs/net/cloud/bluemix
@@ -28,17 +28,16 @@ Then run the setup script:
 
 VSB and VIP could be created in workbench UI environment as well as command line with vxprj tool. Here just list how to create them using vxprj tool, and take itl_quark BSP as an example. 
 
-* VSB create 
-	vxprj vsb create -force -bsp itl_quark vsb_PENTIUM_32_up -S 
-	cd vsb_PENTIUM_32_up 
-	vxprj vsb add IBM_BLUEMIX 
-	make -j 
+* VSB create     
+	vxprj vsb create -force -bsp itl_quark vsb_PENTIUM_32_up -S      
+	cd vsb_PENTIUM_32_up      
+	vxprj vsb add IBM_BLUEMIX     
+	make -j     
 
 * VIP create
-
-	vxprj create -force -vsb vsb_PENTIUM_32_up itl_quark gnu vip_quark_kernel -profile PROFILE_STANDALONE_DEVELOPMENT <br>
-	cd vip_quark_kernel <br>
-	vxprj component add DRV_VXBEND_QRK_GMAC <br>
+	vxprj create -force -vsb vsb_PENTIUM_32_up itl_quark gnu vip_quark_kernel -profile PROFILE_STANDALONE_DEVELOPMENT   
+	cd vip_quark_kernel   
+	vxprj component add DRV_VXBEND_QRK_GMAC   
 	vxprj component add INCLUDE_SHELL INCLUDE_NETWORK INCLUDE_IFCONFIG INCLUDE_PING <br>
 	vxprj component add INCLUDE_IBM_BLUEMIX <br>
 	vxprj parameter set DNSC_PRIMARY_NAME_SERVER "\"128.224.160.11\"" <br>
