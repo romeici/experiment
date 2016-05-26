@@ -26,24 +26,24 @@ Then run the setup script:
 
 ### VSB and VIP creation
 
-VSB and VIP could be created in workbench UI environment as well as command line with vxprj tool. Here just list how to create them using vxprj tool, and take itl_quark BSP as an example. <br>
+VSB and VIP could be created in workbench UI environment as well as command line with vxprj tool. Here just list how to create them using vxprj tool, and take itl_quark BSP as an example. 
 
 * VSB create
 
-	vxprj vsb create -force -bsp itl_quark vsb_PENTIUM_32_up -S 
-	cd vsb_PENTIUM_32_up 
-	vxprj vsb add IBM_BLUEMIX 
-	make -j 	
-
+	vxprj vsb create -force -bsp itl_quark vsb_PENTIUM_32_up -S <br>
+	cd vsb_PENTIUM_32_up <br>
+	vxprj vsb add IBM_BLUEMIX <br>
+	make -j 
+	
 * VIP create
 
-	vxprj create -force -vsb vsb_PENTIUM_32_up itl_quark gnu vip_quark_kernel -profile PROFILE_STANDALONE_DEVELOPMENT 
-	cd vip_quark_kernel 
-	vxprj component add DRV_VXBEND_QRK_GMAC 
-	vxprj component add INCLUDE_SHELL INCLUDE_NETWORK INCLUDE_IFCONFIG INCLUDE_PING 
-	vxprj component add INCLUDE_IBM_BLUEMIX 
-	vxprj parameter set DNSC_PRIMARY_NAME_SERVER "\"128.224.160.11\"" 
-	vxprj parameter set DNSC_SECONDARY_NAME_SERVER "\"147.11.57.128\"" 
+	vxprj create -force -vsb vsb_PENTIUM_32_up itl_quark gnu vip_quark_kernel -profile PROFILE_STANDALONE_DEVELOPMENT <br>
+	cd vip_quark_kernel <br>
+	vxprj component add DRV_VXBEND_QRK_GMAC <br>
+	vxprj component add INCLUDE_SHELL INCLUDE_NETWORK INCLUDE_IFCONFIG INCLUDE_PING <br>
+	vxprj component add INCLUDE_IBM_BLUEMIX <br>
+	vxprj parameter set DNSC_PRIMARY_NAME_SERVER "\"128.224.160.11\"" <br>
+	vxprj parameter set DNSC_SECONDARY_NAME_SERVER "\"147.11.57.128\"" <br>
 
     The test sample of iotfclient is provided in cfg/usrBluemixDemo.c and in src/bluemixSample.c. It can be used to connect your device to the IBM Bluemix cloud, to publish events to the cloud, and to subscribe to commands from the IBM Bluemix cloud. To enable this sample, you need to add the INCLUDE_BLUEMIX_DEMO component, as shown below: 
 	
@@ -51,15 +51,15 @@ VSB and VIP could be created in workbench UI environment as well as command line
 
     If you want to create a connection to the quickstart service, set parameters as follows:
 	
-        vxprj parameter set BLUEMIX_QUICKSTART_MODE TRUE 
+        vxprj parameter set BLUEMIX_QUICKSTART_MODE TRUE
 
     If you want to create a connection to a registered service, set parameters as follows:  <br>
 	
-	vxprj parameter set BLUEMIX_QUICKSTART_MODE FALSE 
-	vxprj parameter set BLUEMIX_DEVICE_ID "\"galileo_bb2b\"" 
-	vxprj parameter set BLUEMIX_DEVICE_TYPE "\"vx7_Galileo\"" 
-	vxprj parameter set BLUEMIX_ORG_ID "\"8hvetd\"" 
-	vxprj parameter set BLUEMIX_TOKEN "\"dhVLQ1U7@yqAffPME7\"" 
+	vxprj parameter set BLUEMIX_QUICKSTART_MODE FALSE <br>
+	vxprj parameter set BLUEMIX_DEVICE_ID "\"galileo_bb2b\"" <br>
+	vxprj parameter set BLUEMIX_DEVICE_TYPE "\"vx7_Galileo\"" <br>
+	vxprj parameter set BLUEMIX_ORG_ID "\"8hvetd\"" <br>
+	vxprj parameter set BLUEMIX_TOKEN "\"dhVLQ1U7@yqAffPME7\"" <br>
 
 
     NOTE: The values of the above four parameters should be consistent with the information of the device registered in the IBM Watson IoT platform.  <br>
@@ -70,10 +70,10 @@ VSB and VIP could be created in workbench UI environment as well as command line
 		
     Then you can set BLUEMIX_SECURE_CONNECTION to either TRUE or FALSE in the VIP, depending on whether a secure connection is required. The default value is TRUE. <br>
 	
-	vxprj parameter set BLUEMIX_SECURE_CONNECTION TRUE 
-	vxprj parameter set BLUEMIX_CAFILE_PATH "/romfs/SSLCACert.pem" 
-	mkdir romfs 
-	cp bluemix/certs/SSLCACert.pem ${VIP_DIR}/romfs 
+	vxprj parameter set BLUEMIX_SECURE_CONNECTION TRUE <br>
+	vxprj parameter set BLUEMIX_CAFILE_PATH "/romfs/SSLCACert.pem" <br>
+	mkdir romfs <br>
+	cp bluemix/certs/SSLCACert.pem ${VIP_DIR}/romfs <br>
 
     or <br>
 	
@@ -81,12 +81,12 @@ VSB and VIP could be created in workbench UI environment as well as command line
 
     The Bluemix sample can also be run in VxWorks user space (i.e., in a VxWorks RTP). A Bluemix RTP file bluemix.vxe is generated in ${VSB_DIR}/usr/root/gnu/bin when building the VSB. To auto-spawn the demo in an RTP, you need to add the INCLUDE_ROMFS component, then set parameter BLUEMIX_RTP_APP to TRUE, and set BLUEMIX_RTP_PATH to "/romfs/bluemix.vxe", as shown below:
 	
-	vxprj component add INCLUDE_ROMFS 
-	vxprj parameter set BLUEMIX_RTP_APP TRUE 
-	vxprj parameter set BLUEMIX_RTP_PATH "/romfs/bluemix.vxe" 
-	mkdir romfs 
-	cp ${VSB_DIR}/usr/root/gnu/bin/bluemix.vxe romfs 
-	vxprj build
+	vxprj component add INCLUDE_ROMFS <br>
+	vxprj parameter set BLUEMIX_RTP_APP TRUE <br>
+	vxprj parameter set BLUEMIX_RTP_PATH "/romfs/bluemix.vxe" <br>
+	mkdir romfs <br>
+	cp ${VSB_DIR}/usr/root/gnu/bin/bluemix.vxe romfs <br>
+	vxprj build<br>
 
     Now you can bring up your device, and it will auto-run the Bluemix SDK in a VxWorks RTP. 
 
