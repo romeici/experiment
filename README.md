@@ -12,17 +12,17 @@ This Readme page provides a quick summary of how to build and run the IBM Bluemi
 
 Before using this SDK with VxWorks 7, first download the SDK source code from the maintainer website:
 
-		https://github.com/ibm-messaging/iotf-embeddedc.git
+	https://github.com/ibm-messaging/iotf-embeddedc.git
 
 You will then need to apply a patch with some small changes that make the IBM Bluemix SDK compatible for VxWorks 7. Some unnecessary files will need to be removed from the SDK directory. These steps are executed by running the script setup.sh found in the directory bluemix/src.   
 Place the bluemix layer in:
 
-		$WIND_BASE/pkgs/net/cloud/bluemix
+	$WIND_BASE/pkgs/net/cloud/bluemix
 	
 Then run the setup script:
 
-		cd $WIND_BASE/pkgs/net/cloud/bluemix/src 
-		./setup.sh 
+	cd $WIND_BASE/pkgs/net/cloud/bluemix/src 
+	./setup.sh 
 
 ### VSB and VIP creation
 
@@ -47,11 +47,11 @@ VSB and VIP could be created in workbench UI environment as well as command line
 
     The test sample of iotfclient is provided in cfg/usrBluemixDemo.c and in src/bluemixSample.c. It can be used to connect your device to the IBM Bluemix cloud, to publish events to the cloud, and to subscribe to commands from the IBM Bluemix cloud. To enable this sample, you need to add the INCLUDE_BLUEMIX_DEMO component, as shown below: 
 	
-        	vxprj component add INCLUDE_BLUEMIX_DEMO
+        vxprj component add INCLUDE_BLUEMIX_DEMO
 
     If you want to create a connection to the quickstart service, set parameters as follows:
 	
-        	vxprj parameter set BLUEMIX_QUICKSTART_MODE TRUE
+        vxprj parameter set BLUEMIX_QUICKSTART_MODE TRUE
 
     If you want to create a connection to a registered service, set parameters as follows:  
 	
@@ -66,7 +66,7 @@ VSB and VIP could be created in workbench UI environment as well as command line
 
     To set up a secure connection over SSL, first include the OPENSSL layer in the VSB, as follows:  
 	
-        	vxprj vsb add OPENSSL  
+        vxprj vsb add OPENSSL  
 		
     Then you can set BLUEMIX_SECURE_CONNECTION to either TRUE or FALSE in the VIP, depending on whether a secure connection is required. The default value is TRUE.  
 	
@@ -77,7 +77,7 @@ VSB and VIP could be created in workbench UI environment as well as command line
 
     or  
 	
-        	vxprj parameter set BLUEMIX_SECURE_CONNECTION   FALSE  
+        vxprj parameter set BLUEMIX_SECURE_CONNECTION   FALSE  
 
     The Bluemix sample can also be run in VxWorks user space (i.e., in a VxWorks RTP). A Bluemix RTP file bluemix.vxe is generated in ${VSB_DIR}/usr/root/gnu/bin when building the VSB. To auto-spawn the demo in an RTP, you need to add the INCLUDE_ROMFS component, then set parameter BLUEMIX_RTP_APP to TRUE, and set BLUEMIX_RTP_PATH to "/romfs/bluemix.vxe", as shown below:
 	
@@ -97,20 +97,20 @@ You can run your device image with the Bluemix SDK and view the device dashboard
 * For the quickstart connection  
     View connection status here:
 
-		'https://quickstart.internetofthings.ibmcloud.com/#/device/'
+	'https://quickstart.internetofthings.ibmcloud.com/#/device/'
 	
     Note: The device MAC address needs to be entered on this page, and it must be in lower case. 
 	
 * For the registered connection  
     View the device connection status here:
 	
-		'https://${ORG_ID}.internetofthings.ibmcloud.com/dashboard/#/devices/browse'
+	'https://${ORG_ID}.internetofthings.ibmcloud.com/dashboard/#/devices/browse'
 	
     Replace ${ORG_ID} with your organization’s ID that is registered in IBM Bluemix. For example:
 	
-    		'https://8hvetd.internetofthings.ibmcloud.com/dashboard/#/devices/browse'
+    	'https://8hvetd.internetofthings.ibmcloud.com/dashboard/#/devices/browse'
 
 * View application dashboard  
     You can also create the Node-RED application in the IBM Bluemix platform and view Bluemix cloud application dashboard here:
 	
-		'https://console.ng.bluemix.net/?direct=classic/#/resources'
+	'https://console.ng.bluemix.net/?direct=classic/#/resources'
