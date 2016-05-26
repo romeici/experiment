@@ -28,13 +28,12 @@ Then run the setup script:
 
 VSB and VIP could be created in workbench UI environment as well as command line with vxprj tool. Here just list how to create them using vxprj tool, and take itl_quark BSP as an example. 
 
-* VSB create
-
-	vxprj vsb create -force -bsp itl_quark vsb_PENTIUM_32_up -S <br>
-	cd vsb_PENTIUM_32_up <br>
-	vxprj vsb add IBM_BLUEMIX <br>
+* VSB create 
+	vxprj vsb create -force -bsp itl_quark vsb_PENTIUM_32_up -S 
+	cd vsb_PENTIUM_32_up 
+	vxprj vsb add IBM_BLUEMIX 
 	make -j 
-	
+
 * VIP create
 
 	vxprj create -force -vsb vsb_PENTIUM_32_up itl_quark gnu vip_quark_kernel -profile PROFILE_STANDALONE_DEVELOPMENT <br>
