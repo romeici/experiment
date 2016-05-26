@@ -104,11 +104,11 @@ You can run your device image with the Bluemix SDK and view the device dashboard
 * For the registered connection  
     View the device connection status here:
 	
-	'https://${ORG_ID}.internetofthings.ibmcloud.com/dashboard/#/devices/browse'
+		'https://${ORG_ID}.internetofthings.ibmcloud.com/dashboard/#/devices/browse'
 	
     Replace ${ORG_ID} with your organization’s ID that is registered in IBM Bluemix. For example:
-	
-    	'https://8hvetd.internetofthings.ibmcloud.com/dashboard/#/devices/browse'
+
+		'https://8hvetd.internetofthings.ibmcloud.com/dashboard/#/devices/browse'
 
 * View application dashboard  
     You can also create the Node-RED application in the IBM Bluemix platform and view Bluemix cloud application dashboard here:
