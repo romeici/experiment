@@ -37,13 +37,13 @@ VSB and VIP could be created in workbench UI environment as well as command line
 
 * VIP create
 
-	vxprj create -force -vsb vsb_PENTIUM_32_up itl_quark gnu vip_quark_kernel -profile PROFILE_STANDALONE_DEVELOPMENT  
-	cd vip_quark_kernel  
-	vxprj component add DRV_VXBEND_QRK_GMAC  
-	vxprj component add INCLUDE_SHELL INCLUDE_NETWORK INCLUDE_IFCONFIG INCLUDE_PING  
-	vxprj component add INCLUDE_IBM_BLUEMIX  
-	vxprj parameter set DNSC_PRIMARY_NAME_SERVER "\"128.224.160.11\""  
-	vxprj parameter set DNSC_SECONDARY_NAME_SERVER "\"147.11.57.128\""  
+		vxprj create -force -vsb vsb_PENTIUM_32_up itl_quark gnu vip_quark_kernel -profile PROFILE_STANDALONE_DEVELOPMENT  
+		cd vip_quark_kernel  
+		vxprj component add DRV_VXBEND_QRK_GMAC  
+		vxprj component add INCLUDE_SHELL INCLUDE_NETWORK INCLUDE_IFCONFIG INCLUDE_PING  
+		vxprj component add INCLUDE_IBM_BLUEMIX  
+		vxprj parameter set DNSC_PRIMARY_NAME_SERVER "\"128.224.160.11\""  
+		vxprj parameter set DNSC_SECONDARY_NAME_SERVER "\"147.11.57.128\""  
 
     The test sample of iotfclient is provided in cfg/usrBluemixDemo.c and in src/bluemixSample.c. It can be used to connect your device to the IBM Bluemix cloud, to publish events to the cloud, and to subscribe to commands from the IBM Bluemix cloud. To enable this sample, you need to add the INCLUDE_BLUEMIX_DEMO component, as shown below: 
 	
