@@ -1,4 +1,4 @@
-to# ##########################################################
+# ##########################################################
 #
 # VxWorks-7 Bluemix SDK User Guide
 #
@@ -107,7 +107,7 @@ VSB and VIP could be created in workbench UI environment as well as command line
     
     - After creating VIP project, you need to configure components and parameters in "Kernel Configuration" in VIP project explorer as shown in the figure below.
     
-    ![](media/kernel configuration.png)
+    ![](media/kernel_configuration.png)
     
     - You need to include the component INCLUDE_IBM_BLUEMIX. If you want to run a demo, you also need to include the component IBM_BLUEMIX_DEMO. About how to set parameters, you can refer to the above section "create VIP using WrTool".
 
