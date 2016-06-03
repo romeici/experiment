@@ -1,4 +1,4 @@
-# ##########################################################
+to# ##########################################################
 #
 # VxWorks-7 Bluemix SDK User Guide
 #
@@ -99,17 +99,17 @@ VSB and VIP could be created in workbench UI environment as well as command line
     
     ![](media/vsb_configuration.png)
     
-    - Now IBM Bluemix SDK layer is added in the VSB. Use the same way to add OPENSSL layer in this project. In the last, save the configuration and build the VSB.
+    - Use the same way to add OPENSSL layer in this project. In the last, save the configuration and build the VSB.
 
 * Create VIP using workbench
 
-    After you done VSB building, click File -> New -> Wind River Workbench Project, and select "Build type" as "Kernel Image". Set project name as vip_itl_quark_1 and setup the project based on existed VSB vsb_itl_quark_1 already created in the above section and then select profile as "PROFILE_STANDALONE_DEVELOPMENT". 
+    - After you done VSB building, click File -> New -> Wind River Workbench Project, and select "Build type" as "Kernel Image". Set project name to "vip_itl_quark_1" and setup the project based on existed VSB vsb_itl_quark_1 which has already created in the above section and then select profile as "PROFILE_STANDALONE_DEVELOPMENT".
     
-    After creating VIP project, you need to configure components and parameters in "Kernel Configuration" in VIP project explorer as shown in the figure below.
+    - After creating VIP project, you need to configure components and parameters in "Kernel Configuration" in VIP project explorer as shown in the figure below.
     
     ![](media/kernel configuration.png)
     
-    The component INCLUDE_IBM_BLUEMIX must be included, If you want to run a demo, you also need to include the component IBM_BLUEMIX_DEMO. About how to set parameters, you can refer to the above section "create VIP using WrTool".
+    - You need to include the component INCLUDE_IBM_BLUEMIX. If you want to run a demo, you also need to include the component IBM_BLUEMIX_DEMO. About how to set parameters, you can refer to the above section "create VIP using WrTool".
 
 ### Run image and view the visualization
 
