@@ -112,7 +112,7 @@ The VxWorks 7 VSB (VxWorks Source Build) and VIP (VxWorks Image Project) can be 
 ![](doc/media/vsb_source_build_configuration.png)
 8.  Follow the same steps to add OPENSSL layer in this project
 9.  Click File > Save to save the source build configuration
-10. Right-click the vsb_itl_quark_1 in the project explorer
+10. and then click "Build Project" to build the VSB
 
 * Create VIP using workbench
 
