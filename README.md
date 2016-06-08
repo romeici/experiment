@@ -114,6 +114,7 @@ The VxWorks 7 VSB (VxWorks Source Build) and VIP (VxWorks Image Project) can be 
 9.  Click File > Save to save the source build configuration
 10. Build the VSB.
 
+
 * Create VIP using workbench
 
 1.  After you have built the VSB, click File > New > Wind River Workbench Project
