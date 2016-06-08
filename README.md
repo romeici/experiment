@@ -101,8 +101,8 @@ The VxWorks 7 VSB (VxWorks Source Build) and VIP (VxWorks Image Project) can be 
 
 * Create VSB using workbench
 
-    1.  Open Workbench 4  
-    2.  Click File > New > Wind River Workbench Project  
+1.  Open Workbench 4  
+2.  Click File > New > Wind River Workbench Project  
 3.  Set "Build type" to "Source Build"  
 4.  Click "Next", set-up the project based on the desired board support package or CPU as shown in the figure below:  
 5.  Click "Finish" to create the VSB project  
