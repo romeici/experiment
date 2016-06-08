@@ -101,23 +101,35 @@ The VxWorks 7 VSB (VxWorks Source Build) and VIP (VxWorks Image Project) can be 
 
 * Create VSB using workbench
 
-    - Open Workbench 4, click File -> New -> Wind River Workbench Project, and select "Build type" as "Source Build", setup the project based on board support package or CPU.
+    1.  Open Workbench 4  
+    2.  Click File > New > Wind River Workbench Project  
+    3.  Set "Build type" to "Source Build"  
+    4.  Click "Next", set-up the project based on the desired board support package or CPU as shown in the figure below:  
+    5.  Click "Finish" to create the VSB project  
+    6.  Open "Source Build Configuration" in the Project Explorer of vsb_itl_quark_1  
+    7.  Right-click the IBM_BLUEMIX layer in the net option folder and select "Add with Dependencies" to add the IBM_BLUEMIX layer, as shown in the figure below:  
 
-    - After creating VSB project, Open "Source Build Configuration" in project explorer of vsb_itl_quark_1, find IBM BLEMIX layer in net option folder, right click and then click "Add with Dependencies" to add IBM_BLUEMIX layer, as shown in the figure below.
+        ![](doc/media/vsb_source_build_configuration.png)
 
-    ![](doc/media/vsb_source_build_configuration.png)
-
-    - Use the same way to add OPENSSL layer in this project. In the last, save the configuration and build the VSB.
+    8.  Follow the same steps to add OPENSSL layer in this project  
+    9.  Click File->Save to save the source build configuration  
+    10. Right-click the vsb_itl_quark_1 in the project explorer and then click "Build Project" to build the VSB.  
 
 * Create VIP using workbench
 
-    - After you done VSB building, click File -> New -> Wind River Workbench Project, and select "Build type" as "Kernel Image". Setup the project based on existed VSB vsb_itl_quark_1 which has already created in the above section and then select profile as "PROFILE_STANDALONE_DEVELOPMENT".
+    1.  After you have built the VSB, click File > New > Wind River Workbench Project  
+    2.  Set "Build type" to "Kernel Image"  
+    3.  Click "Next", then set-up the project based on the existing VSB vsb_itl_quark_1, which was created in the above section  
+    4.  Click "Next", then set profile to "PROFILE_STANDALONE_DEVELOPMENT"  
+    5.  Click "Finish" to create the VIP project  
+    6.  After creating the VIP project, configure the components and parameters of the "Kernel Configuration" in the VIP Project Explorer, as shown in the figure below:  
 
-    - After creating VIP project, you need to configure components and parameters in "Kernel Configuration" in VIP project explorer as shown in the figure below.
+        ![](doc/media/vip_kernel_configuration.png)
 
-    ![](doc/media/vip_kernel_configuration.png)
-
-    - You need to include the component INCLUDE_IBM_BLUEMIX. If you want to run a demo, you also need to include the component IBM_BLUEMIX_DEMO. About how to set parameters, you can refer to the above section "Create VIP using WrTool".
+    7.  You'll need to include the component INCLUDE_IBM_BLUEMIX. If you want to run the Bluemix SDK demo provided in src/bluemixSample.c, you also need to include the component IBM_BLUEMIX_DEMO  
+    8.  For information on setting parameters, refer to the above section "Create VIP using WrTool"  
+    9.  Click File->Save to save the components configuration  
+    10. Right-click the vip_itl_quark_1 in the project explorer and then click "Build Project" to build the VIP.  
 
 ### View the device information at website
 
