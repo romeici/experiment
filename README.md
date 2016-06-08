@@ -105,11 +105,12 @@ The VxWorks 7 VSB (VxWorks Source Build) and VIP (VxWorks Image Project) can be 
 2.  Click File > New > Wind River Workbench Project
 3.  Set "Build type" to "Source Build"
 4.  Click "Next", set-up the project based on the desired board support package or CPU
-5.  Click "Finish" to create the VSB project  
+5.  Click "Finish" to create the VSB project
+![](doc/media/vsb_creation.png)
 6.  Open "Source Build Configuration" in the Project Explorer of vsb_itl_quark_1
 7.  Right-click the IBM_BLUEMIX layer in the net option folder and select "Add with Dependencies" to add the IBM_BLUEMIX layer, as shown in the figure below:
 
-    ![](doc/media/vsb_source_build_configuration.png)
+![](doc/media/vsb_source_build_configuration.png)
 
 8.  Follow the same steps to add OPENSSL layer in this project
 9.  Click File > Save to save the source build configuration
@@ -124,7 +125,7 @@ The VxWorks 7 VSB (VxWorks Source Build) and VIP (VxWorks Image Project) can be 
 5.  Click "Finish" to create the VIP project
 6.  After creating the VIP project, configure the components and parameters of the "Kernel Configuration" in the VIP Project Explorer, as shown in the figure below:
 
-    ![](doc/media/vip_kernel_configuration.png)
+![](doc/media/vip_kernel_configuration.png)
 
 7.  You'll need to include the component INCLUDE_IBM_BLUEMIX. If you want to run the Bluemix SDK demo provided in src/bluemixSample.c, you also need to include the component IBM_BLUEMIX_DEMO
 8.  For information on setting parameters, refer to the above section "Create VIP using WrTool"
@@ -142,7 +143,7 @@ You can run your device image with the Bluemix SDK and then view the device info
 
     Note: The device MAC address needs to be entered on this page, and it must be in lower case as shown in the figure below:
 
-    ![](doc/media/quickstart_connection_state.png)
+![](doc/media/quickstart_connection_state.png)
 
 * For the registered connection  
     View the device connection status here:  
@@ -155,7 +156,7 @@ You can run your device image with the Bluemix SDK and then view the device info
 
     Connection status is showed in the figure below:
 
-    ![](doc/media/registered_device_connection_state.png)
+![](doc/media/registered_device_connection_state.png)
 
 * View application dashboard  
     You can also create the Node-RED application in the IBM Bluemix platform and view the application dashboard here:
