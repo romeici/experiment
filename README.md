@@ -109,7 +109,7 @@ The VxWorks 7 VSB (VxWorks Source Build) and VIP (VxWorks Image Project) can be 
 6.  Open "Source Build Configuration" in the Project Explorer of vsb_itl_quark_1
 7.  Right-click the IBM_BLUEMIX layer in the net option folder and select "Add with Dependencies" to add the IBM_BLUEMIX layer, as shown in the figure below:
 
-        ![](doc/media/vsb_source_build_configuration.png)
+    ![](doc/media/vsb_source_build_configuration.png)
 
 8.  Follow the same steps to add OPENSSL layer in this project
 9.  Click File->Save to save the source build configuration
