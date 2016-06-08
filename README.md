@@ -101,13 +101,10 @@ The VxWorks 7 VSB (VxWorks Source Build) and VIP (VxWorks Image Project) can be 
 
 * Create VSB using workbench
 
-1.  Open Workbench 4  
-2.  Click File > New > Wind River Workbench Project  
+    1.  Open Workbench 4  
+    2.  Click File > New > Wind River Workbench Project  
 3.  Set "Build type" to "Source Build"  
 4.  Click "Next", set-up the project based on the desired board support package or CPU as shown in the figure below:  
-
-    ![](doc/media/vsb_creation.png)
-
 5.  Click "Finish" to create the VSB project  
 6.  Open "Source Build Configuration" in the Project Explorer of vsb_itl_quark_1  
 7.  Right-click the IBM_BLUEMIX layer in the net option folder and select "Add with Dependencies" to add the IBM_BLUEMIX layer, as shown in the figure below:  
