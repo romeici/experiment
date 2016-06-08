@@ -124,6 +124,9 @@ The VxWorks 7 VSB (VxWorks Source Build) and VIP (VxWorks Image Project) can be 
 1.  After you have built the VSB, click File > New > Wind River Workbench Project
 2.  Set "Build type" to "Kernel Image"
 3.  Click "Next", then set-up the project based on the existing VSB vsb_itl_quark_1, which was created in the above section
+
+    ![](doc/media/vsb_creation.png)
+
 4.  Click "Next", then set profile to "PROFILE_STANDALONE_DEVELOPMENT"
 5.  Click "Finish" to create the VIP project
 6.  After creating the VIP project, configure the components and parameters of the "Kernel Configuration" in the VIP Project Explorer, as shown in the figure below:
