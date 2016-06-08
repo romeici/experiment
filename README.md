@@ -125,7 +125,7 @@ The VxWorks 7 VSB (VxWorks Source Build) and VIP (VxWorks Image Project) can be 
 7.  You'll need to include the component INCLUDE_IBM_BLUEMIX. If you want to run the Bluemix SDK demo provided in src/bluemixSample.c, you also need to include the component IBM_BLUEMIX_DEMO
 8.  For information on setting parameters, refer to the above section "Create VIP using WrTool"
 9.  Click File->Save to save the components configuration
-10. Right-click the vip_itl_quark_1 in the project explorer and then click "Build Project" to build the VIP.
+10. Right-click the vip_itl_quark_1 in the project explorer and then click "Build Project" to build the VIP
 
 ### View the device information at website
 
