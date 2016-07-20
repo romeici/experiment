@@ -17,14 +17,14 @@ Prerequisite for running this SDK in VxWorks 7 as follow:
 4. Make sure the IBM Bluemix SDK source code is available from the maintainer's website:
 
     https://github.com/ibm-messaging/iotf-embeddedc.git
+
 ### Installation
 
 First, you need to download the VxWorks 7 IBM Bluemix layer from:
 
     https://github.com/Wind-River/vxworks7-bluemix-sdk.git
 
-Once the layer is present in your VxWorks 7 installation you can download the IBM Bluemix SDK and apply some necessary patches to make it suitable for building with VxWorks 7.
-To download and patch the SDK you must run the setup.sh script found in the layer's src directory.
+Once the layer is present in your VxWorks 7 installation you can download the IBM Bluemix SDK and apply some necessary patches to make it suitable for building with VxWorks 7.To download and patch the SDK you must run the setup.sh script found in the layer's src directory. Note that setup.sh will download the IBM Bluemix SDK from the IBM github site.
 
 * Download the bluemix layer into VxWorks 7  
 
