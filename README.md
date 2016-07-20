@@ -10,7 +10,7 @@ This README page provides a quick summary of how to build and run the IBM Bluemi
 
 ### Prerequisite                                       
                                                        
-Before install the Bluemix SDK in VxWorks 7, please check your development environment:
+Before install the Bluemix SDK in VxWorks 7, please check your development environment  
 1. Install git and make sure git can be run from a command line.  
 2. Bash is required in your enviroment, for Windows you can use git bash.  
 3. Make sure VxWorks 7 DVD has been installed.         
