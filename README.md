@@ -11,9 +11,9 @@ This README page provides a quick summary of how to build and run the IBM Bluemi
 ### Installation
 
 Prerequisite for running this SDK in VxWorks 7:
-1. Install git and make sure git can be run from a command line.
-2. Bash is required in your enviroment, for Windows you can use git bash.
-3. Make sure VxWorks 7 DVD has been installed.
+1. Install git and make sure git can be run from a command line.  
+2. Bash is required in your enviroment, for Windows you can use git bash.  
+3. Make sure VxWorks 7 DVD has been installed.  
 4. Make sure the IBM Bluemix SDK source code is available from the maintainer's website:
 
     https://github.com/ibm-messaging/iotf-embeddedc.git
